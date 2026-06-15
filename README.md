@@ -92,6 +92,15 @@ python deep_drought.py train \
 
 Config values can be overridden with repeated `--cfg key=value` arguments.
 
+Best model (after two epochs of training):
+```bash
+python deep_drought.py train \
+  --cfg use_test_dist_sample_weights=true \
+  --cfg mae_weight=1.5 \
+  --cfg bce_weight=0.3
+```
+
+
 ### 3. Predict from a saved checkpoint
 
 ```bash
